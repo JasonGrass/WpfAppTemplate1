@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -32,8 +32,10 @@ public class Bootstrapper : MicrosoftDependencyInjectionBootstrapper<RootViewMod
     protected override void ConfigureIoC(IServiceCollection services)
     {
         base.ConfigureIoC(services);
-        services.AddSingleton<RootViewModel>();
-        services.AddSingleton<RootView>();
+        // services.AddSingleton<RootViewModel>();
+        // services.AddSingleton<RootView>();
+
+        services.AddViewModelServices();
     }
 
     protected override void OnLaunch()
@@ -59,8 +61,7 @@ public class MicrosoftDependencyInjectionBootstrapper<TRootViewModel> : Bootstra
     private ServiceProvider? _serviceProvider;
     private TRootViewModel? _rootViewModel;
 
-    protected virtual TRootViewModel RootViewModel =>
-        this._rootViewModel ??= (TRootViewModel)this.GetInstance(typeof(TRootViewModel));
+    protected virtual TRootViewModel RootViewModel => this._rootViewModel ??= (TRootViewModel)this.GetInstance(typeof(TRootViewModel));
 
     public IServiceProvider ServiceProvider => this._serviceProvider!;
 

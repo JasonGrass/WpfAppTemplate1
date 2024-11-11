@@ -1,10 +1,12 @@
-﻿using System.Text;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Text;
 
-namespace WpfAppTemplate1.Analyzers.SourceGenerators;
+namespace WpfAppTemplate1.Generators;
 
 [Generator]
 public class ViewDependencyInjectionGenerator : ISourceGenerator

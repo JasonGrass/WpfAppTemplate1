@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WpfAppTemplate1.Analyzers\WpfAppTemplate1.Analyzers.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\WpfAppTemplate1.Generators\WpfAppTemplate1.Generators.csproj"  OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
   </ItemGroup>
 
 </Project>

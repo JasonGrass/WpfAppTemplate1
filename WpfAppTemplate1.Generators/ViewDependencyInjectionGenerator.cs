@@ -8,8 +8,12 @@ using Microsoft.CodeAnalysis.Text;
 
 namespace WpfAppTemplate1.Generators;
 
-[Generator]
-public class ViewDependencyInjectionGenerator : ISourceGenerator
+/**
+ * 这里使用 ISourceGenerator 来实现，VS 会频繁调用，请参考 ViewDependencyInjectionGenerator2
+ */
+
+//[Generator]
+public class ViewDependencyInjectionGenerator /*: ISourceGenerator*/
 {
     public void Initialize(GeneratorInitializationContext context) { }
 
